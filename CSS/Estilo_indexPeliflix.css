@@ -1,0 +1,801 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none; 
+    box-sizing: border-box; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    width: 100%;
+    font-size: 16px;
+    background-color: black;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+}
+.Arriba-box{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+}
+.Arriba-box #background1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(50%);
+}
+#background1 > h1{
+    color: #ad2929;
+    font-size: 4rem;
+}
+.Arriba-box #Cuenta{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Arriba-box #Cuenta > span{
+    width: 30%;
+    height: 35%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 20px;
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #ad2929;
+}
+.Arriba-box #Cuenta > span:hover{
+    background-color: red;
+}
+.Abajo-box{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box{
+    width: 70%;
+    height: 60%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+.login-box > article{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box h1{
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+.login-box h3{
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.password-container {
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+input{
+    width: 40%;
+    padding: 10px;
+    padding-right: 10%;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: whitesmoke;
+    
+}
+#togglePassword, #togglePasswordReg{
+    position: absolute;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    z-index: 15;
+    color: white;
+    display: none; 
+}
+#togglePassword {
+    right: 15px;
+    top: 50%;
+    transform: translate(-150%, -50%);
+}
+#togglePasswordReg {
+    right: 15px;
+    top: 12px; 
+}
+
+.hidden {
+    display: none !important;
+}
+
+.login-box .password-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+.login-box .password-wrapper {
+    width: 45%;
+}
+.login-box button{
+    width: 15%;
+    height: 50%;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ad2929;
+}
+.login-box button:hover{
+    background-color: red;
+}
+
+.eye-icon:not(.hidden) {
+    display: block;
+}
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.LoginPanel{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-wrapper input {
+    width: 100% !important;
+    padding-right: 45px !important;
+    box-sizing: border-box;
+}
+.nuevacuenta{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fondoPeli{
+    width: 50%;
+    height: 100%;
+    background-image: url(../IMAGENES/PELIFLIX.png);
+    background-size: 100% 100%;
+}
+.CrearCuenta{
+    background: #141414;
+    padding: 40px;
+    border-radius: 10px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.CrearCuenta h1{
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+.CrearCuenta label{
+    margin-bottom: 5px;
+    text-align: left;
+    color: #b3b3b3;
+    font-size: 20px;
+}
+.CrearCuenta input{
+    background: #333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.CrearCuenta input:focus{
+    background: #454545;
+    outline: 3px solid gray;
+}
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+.clear-btn {
+    position: absolute;
+    right: 15px;
+    color: #b3b3b3;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+    user-select: none;
+}
+.input-container input[type="password"], 
+.password-wrapper input[type="password"] {
+    padding-right: 40px !important;
+}
+.botones-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.btn-rojo {
+    width: 40%;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background-color: #b43e3e;
+}
+.btn-rojo:hover {
+    background-color: red;
+}
+
+
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#1d1b1a 0%, #201f1f 100% );
+}
+
+header h1{
+    font-size: 70px;
+    color: rgb(255, 0, 64);
+}
+
+nav{
+    width: 100%;
+    height: 15vh;
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: black;
+}
+nav .background{
+    width: 20%;
+    height: 100%;
+    background-image: URL(../IMAGENES/PELIFLIX.png);
+    background-size: 100% 100%;
+}
+nav .opciones{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.opciones .genero{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(255, 0, 64);
+    border: 2px solid red;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+.opciones .genero:hover{
+    transform: translateY(-5px);
+    background: linear-gradient(45deg,#522b0b 0%, #e94a4a 100% );
+    box-shadow: 0 10px 25px rgba(120, 100, 36, 0.8);
+}
+.opciones .genero:hover section.panelOculto{
+    transform: translateY(0);
+}
+.panelOculto{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s;
+    background: linear-gradient(45deg,#1d1b1a 0%, #201f1f 100% );
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-20px);
+}
+.panelOculto.mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.panelOculto .cabeza{
+    width: 100%;
+    height: 5%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg,#7c7b7b 0%, #3d3c3c 100% );
+}
+.cabeza > h1{
+    font-size: 25px;
+    color: red;
+}
+.cabeza > .head{
+    width: 4%;
+    height: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.cabeza > .head:hover{
+    background-color: red;
+}
+.panelOculto .galeria{
+    width: 100%;
+    height: 95%;
+    padding: 20px;
+    gap: 10px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg,#3f3934 0%, #160b0b 100% );
+}
+
+.galeria > div{
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 8px; 
+}
+.galeria div > img{
+    width: 100%;
+    height: 90%;
+    cursor: pointer;
+    border-radius: 8px;
+    background-size: 100% 100%;
+}
+.galeria div > img:hover{
+    box-shadow: 0 0 5px rgb(119, 118, 98);
+}
+
+.galeria .btn-ver{
+    width: 60%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: gray;
+}
+.galeria .btn-ver:hover{
+    transform: scale(1.1 , 1.1);
+    box-shadow: 0 0 10px rgb(180, 179, 159);
+}
+.panelOculto .galeria::-webkit-scrollbar, .pScrolleable::-webkit-scrollbar{
+    width:5px;
+}
+.panelOculto .galeria::-webkit-scrollbar-track{
+    background-color: gray;
+    background: transparent;
+}
+.panelOculto .galeria::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius:10px;
+}
+
+.enlace-video {
+  color: #ff4757;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.enlace-video:hover {
+  color: #ff6b81;
+}
+
+#modal-video {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  background: #000;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  max-width: 800px;
+  width: 90%;
+}
+
+#modal-video::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.contenido-modal {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    aspect-ratio: 16 / 9;
+}
+
+.contenido-modal video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.PanelDetalles1{
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+    top: 5%;
+    left: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;   
+}
+.PanelDetalles2{
+    width: 50%;
+    height: 100vh; 
+    position: fixed;
+    top: 5%;
+    right:100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111; 
+}
+.CajaAriba{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.CajaAriba .cerrar{
+    width: 8%;
+    height: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;   
+}
+.CajaAriba .cerrar:hover{
+    background-color: red;
+}
+.detalles{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.detalles > .one{
+    width: 100%;
+    height: 20%;
+    padding: 10px; 
+}
+.one > .nombre{
+    font-size: 35px;
+    text-align: center;
+    color: white;    
+}
+.detalles > .two{
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;   
+}
+.two > .sinopsis{
+    font-size: 20px;
+}
+.detalles > .three{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+.three > #btn-verpeli{
+    width: 40%;
+    height: 20%;
+}
+.detalles > .imgDetalle{
+    width: 100%;
+    height: 100%;
+}
+.imgDetalle > img{
+    width: 100%;
+    height: 100%;
+}
+
+.panelOculto {
+  transform: translateY(-20px);
+}
+
+.panelOculto.mostrar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.PanelDetalles1, .PanelDetalles2{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+.PanelDetalles1.mostrar {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.PanelDetalles2.mostrar {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.opciones .genero:hover section.panelOculto{
+    transform: translateY(0);
+}
+
+
+main{
+    width: 100%;
+    height: 100vh;
+    gap: 10px;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg,#1d1b1a 0%, #201f1f 100% );
+}
+main::-webkit-scrollbar, .pScrolleable::-webkit-scrollbar{
+    width:5px;
+}
+main::-webkit-scrollbar-track{
+    background-color: gray;
+    background: transparent;
+}
+main::-webkit-scrollbar-thumb{
+   background-color: grey;
+   border-radius:10px;
+   transition: all 0.5s;
+}
+
+main > img{
+    width: 200px;
+    height: 200px;
+    min-width: 100px;
+    max-width: 200px;
+    min-height: 260px;
+    max-height: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #B6E1E7;
+    box-shadow: 0px 0px 2px black;
+    filter: brightness(0.6);
+    transition: all 0.5s;
+}
+.panelVideo{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s ease;
+  z-index: 2000;
+}
+.panelVideo.mostrar{
+  opacity: 1;
+  visibility: visible;
+}
+.contenedorVideo{
+  width: 80%;
+  height: 80%;
+}
+.contenedorVideo{
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+.contenedorVideo iframe{
+  width: 100%;
+  height: 100%;
+}
+.btn-cerrar-video{
+  position: absolute;
+  top: -45px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1px;
+    cursor: pointer;
+    background: linear-gradient(45deg,#1d1b1a 0%, #201f1f 100% );   
+}
+
+footer div{
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: gray;
+}
+footer > div {
+  background-color: #333;
+  color: white;
+  margin-bottom: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+div > p{
+    margin: 0;
+    font-size: 25px;
+    color: white;
+}
+span{
+    font-size: 50px;
+    color: white;
+}
+footer div:nth-child(1){
+    background: transparent;
+}
+footer > div span {
+  display: inline-block;
+  font-size: 50px;
+  transition: transform 0.3s ease;
+}
+article.oculto {
+  width: 80%;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #333;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+article p{
+    color: white;
+    font-size: 25px;
+}
+footer > div.active + article.oculto {
+  max-height: 200px;
+  padding: 20px;
+}
+footer > div.active span {
+  transform: rotate(45deg);
+}
